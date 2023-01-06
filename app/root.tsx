@@ -1,5 +1,4 @@
 import {
-  Link,
   Links,
   LiveReload,
   Meta,
@@ -8,10 +7,13 @@ import {
   ScrollRestoration,
   useCatch,
 } from "remix";
-import type { LinksFunction } from "remix";
+
 import styles from "./tailwind.css";
 
-export const links: LinksFunction = () => [{ rel: "stylesheet", href: styles }];
+export function links() {
+  return [{ rel: "stylesheet", href: styles }];
+}
+
 // https://remix.run/api/conventions#default-export
 // https://remix.run/api/conventions#route-filenames
 export default function App() {
@@ -31,6 +33,7 @@ export function ErrorBoundary({ error }: { error: Error }) {
         <h1>There was an error</h1>
         <p>{error.message}</p>
         <hr />
+        <p>jhdjksahdkjahdkjahdjkahdjksahjk</p>
         <p>
           Hey, developer, you should replace this with what you want your users
           to see.
@@ -82,7 +85,7 @@ function Document({
   title?: string;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className="h-full">
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -90,7 +93,7 @@ function Document({
         <Meta />
         <Links />
       </head>
-      <body>
+      <body className="h-full">
         {children}
         <ScrollRestoration />
         <Scripts />
