@@ -181,11 +181,8 @@ export function GithubContainer({ user, repos }: GithubContainerProps) {
           )}
         </Disclosure>
 
-        {/* 3 column wrapper */}
         <div className="flex-grow w-full max-w-7xl mx-auto xl:px-8 lg:flex">
-          {/* Left sidebar & main wrapper */}
           <div className="flex-1 min-w-0 bg-white xl:flex">
-            {/* Account profile */}
             <div className="xl:flex-shrink-0 xl:w-64 xl:border-r xl:border-gray-200 bg-white">
               <div className="pl-4 pr-6 py-6 sm:pl-6 lg:pl-8 xl:pl-0">
                 <div className="flex items-center justify-between">
